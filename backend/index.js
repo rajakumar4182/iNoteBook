@@ -3,7 +3,7 @@ const express = require("express");
 
 connectToMongo();
 const app = express();
-const port = 3000;
+const port = 5001;
 
 // To send data in jason or request we have to use middleware as below.
 app.use(express.json());
