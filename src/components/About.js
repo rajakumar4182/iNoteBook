@@ -1,5 +1,16 @@
-import React from "react";
-
-export const About = () => {
-  return <div>This is about</div>;
+import React, { useContext, useEffect } from "react";
+import noteContext from "../context/notes/NoteContext";
+const About = () => {
+  const a = useContext(noteContext);
+  useEffect(() => {
+    a.update();
+    // eslint-disable-next-line
+  }, []);
+  return (
+    <div>
+      This is about {a.state.name} and he is {a.state.age} years old
+    </div>
+  );
 };
+
+export default About;
