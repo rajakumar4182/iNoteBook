@@ -1,10 +1,12 @@
 const connectToMongo = require("./db");
 const express = require("express");
+var cors = require("cors");
 
 connectToMongo();
 const app = express();
 const port = 5001;
 
+app.use(cors());
 // To send data in jason or request we have to use middleware as below.
 app.use(express.json());
 
