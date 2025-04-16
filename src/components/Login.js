@@ -21,7 +21,7 @@ const Login = () => {
     console.log(json);
     if (json.success) {
       //save the authToken and redirect
-      localStorage.setItem("toke", json.authtoken);
+      localStorage.setItem("token", json.authtoken);
       navigate("/");
     } else {
       alert("Invalid credentials");
